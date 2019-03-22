@@ -1,0 +1,43 @@
+permalink: /:year-:month-:day/:title/
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input:  GFM
+  syntax_highlighter: rouge
+
+
+paginate: 10
+paginate_path: ":num"
+baseurl: ""
+
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      styles : [highlight.css,post.css]
+      scripts : [post.js]
+
+
+
+title: "sherlock ☺ help"
+email: "sherlock@bakerstreet.club"
+description: "逻 辑 的 旋 律 牵 动 现 象 ， 永 远 演 奏 者 事 实 。"
+github_username:  "sherlock-help"
+swiftype_searchId: "ncwR9a8S9CTx2q9SgsJm"
+disqus_shortname: "sherlock.help"
+
+
+
+
+url: "http://sherlock.help"
+imgrepo: "http://sherlock.help/static/img"
+
+
+#url: "http://127.0.0.1:4000"
+#imgrepo: "http://127.0.0.1:4000/static/img"
