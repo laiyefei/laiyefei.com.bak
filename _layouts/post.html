@@ -36,18 +36,21 @@ layout: default
             
             <div id="dvGitment"></div>
             <!-- region gitment about -->
-            <link rel="stylesheet" href="http://laiyefei.com/static/mix/gitment/gitment.css">
-            <script src="http://laiyefei.com/static/mix/gitment/gitment.js"></script>
+            <link rel="stylesheet" href="https://ish9dcn.github.io/ish9dcn/static/mix/gitalk/gitalk.v1.2.2.min.css">
+            <script src="https://ish9dcn.github.io/ish9dcn/static/mix/gitalk/gitalk.v1.2.2.js"></script>
             <script type="text/javascript">
-              var gitment = new Gitment({
+              var gitalk = new Gitalk({
+                  id:"xxxxxxxxxxxxxx",
+                  title:"this title",
                   owner: 'ish9dcn',
                   repo: 'warehouse',
-                  oauth: {
-                      client_id: 'f8dba1317eaa7f5f4335',
-                      client_secret: 'f8c02b2c5757afa3845a55c84aac222727a6abfb',
-                  },
+                  clientID: 'f8dba1317eaa7f5f4335',
+                  clientSecret: 'f8c02b2c5757afa3845a55c84aac222727a6abfb',
+                  labels:["gitalk_test"],
+                  admin: ['ish9dcn'],
+                  body: decodeURI(location.href)
               });
-              gitment.render('dvGitment');
+              gitalk.render('dvGitment');
             </script>
             <!-- endregion -->
         </div>
