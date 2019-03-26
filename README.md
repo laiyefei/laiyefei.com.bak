@@ -1,8 +1,8 @@
-##[点我查看中文说明](https://github.com/sherlock-help/sherlock.help/blob/gh-pages/README_zh_CN.md)
+##[点我查看中文说明](./blob/gh-pages/README_zh_CN.md)
 
 # Blog Address
 
-<http://sherlock.help/>
+<http://laiyefei.com/>
 
 # Easy Introduce
 
