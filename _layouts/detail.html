@@ -1,7 +1,5 @@
 ---
 layout: list
-title: 文章详情
-permalink: /detail
 ---
 
 <div>
@@ -27,48 +25,8 @@ permalink: /detail
 	  </span> 
 	</div>
   </header>
-  <article class="article-content">
-	<p><img data-original="images/201610181557196870.jpg" src="images/201610181557196870.jpg" alt="" /></p>
-	<p>文章效果示例，文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字。</p>
-	<pre class="prettyprint lang-cs">代码示例：
-	public static double JieCheng(int number)
-	{
-		if (number == 0)
-		{
-			return 0;
-		}
-
-		//初始值必须设置为1
-		double result = 1; 
-
-		for (int i = number; i &gt;= 1; i--)
-		{
-			result = result*i;
-		}
-		return result;
-	}</pre>
-	<!-- <div class="bdsharebuttonbox">
-		<a href="#" class="bds_more" data-cmd="more"></a>
-		<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-		<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-		<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-		<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-		<a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-		<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div> -->
-
-	    <script>                  
-	    	// window._bd_share_config = { 
-	    	// 	"common": { 
-	    	// 		"bdSnsKey": {}, 
-	    	// 		"bdText": "", 
-	    	// 		"bdMini": "2", 
-	    	// 		"bdMiniList": false, 
-	    	// 		"bdPic": "", 
-	    	// 		"bdStyle": "1", 
-	    	// 		"bdSize": "32" 
-    		// 	}, "share": {} }; 
-    		// 	with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=0.js?cdnversion=' + ~(-new Date() / 36e5)];
-    		</script>
+  <article class="article-content"> 
+	{{ content }}
   </article>
   <div class="article-tags">标签：<a href="#list/2/" rel="tag" >DTcms博客</a><a href="#list/3/" rel="tag" >木庄网络博客</a><a href="#list/4/" rel="tag" >独立博客</a><a href="#list/5/" rel="tag" >修复优化</a>
 	</div>
