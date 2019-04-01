@@ -57,11 +57,9 @@ permalink: /list
 	<div class="widget-sentence-content">
 		<ul class="plinks ptags">           
 			{% for tag in post.tags %}
-
-			<li>
-				<a href="{{ site.baseurl | prepend: site.url }}/tags/#{{ tag }}" title="sql" draggable="false">{{ tag }} <span class="badge"></span></a>
-          	</li>  
-          	
+				<li>
+					<a href="{{ site.baseurl | prepend: site.url }}/tags/#{{ tag }}" title="sql" draggable="false">{{ tag }} <span class="badge"></span></a>
+	          	</li>  
           	{% endfor %}            
 		</ul>
 	</div>

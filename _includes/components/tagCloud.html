@@ -1,0 +1,25 @@
+<!-- <div class="tagCloud">
+  {% for tag in site.tags %}
+    <a href="#{{ tag | first }}">{{ tag | first }}</a>
+  {% endfor %}
+</div>
+<link rel="stylesheet" type="text/css" href="/assets/css/resos/tagCloud.css" />
+<script type="text/javascript" src="/assets/js/base/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/resos/tagCloud.js"></script>
+<script type="text/javascript">
+	setTimeout(function(){
+		$(function(){
+		    $('.tagCloud').tagCloud();
+		});
+	}, 5000)
+</script> -->
+<h3>标签云</h3>
+<div class="widget-sentence-content">
+  <ul class="plinks ptags">           
+    {% for tag in site.tags %}
+      <li>
+    	<a href="#{{ tag | first }}">{{ tag | first }} <span class="badge">{{ paginator.total_posts }}</span></a>
+	 </li>  
+  	{% endfor %}            
+  </ul>
+</div>
