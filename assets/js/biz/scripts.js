@@ -80,14 +80,14 @@ $("#gotop").click(function() {
 		'scrollTop': 0
 	}, 500)
 });
-$("img.thumb").lazyload({
-	placeholder: "/assets/img/base/occupying.png",
-	effect: "fadeIn"
-});
-$(".single .content img").lazyload({
-	placeholder: "/assets/img/base/occupying.png",
-	effect: "fadeIn"
-});
+// $("img.thumb").lazyload({
+// 	placeholder: "/assets/img/base/occupying.png",
+// 	effect: "fadeIn"
+// });
+// $(".single .content img").lazyload({
+// 	placeholder: "/assets/img/base/occupying.png",
+// 	effect: "fadeIn"
+// });
 $('[data-toggle="tooltip"]').tooltip();
 jQuery.ias({
 	history: false,
@@ -99,10 +99,10 @@ jQuery.ias({
 	loader: '<div class="pagination-loading"><img src="/assets/img/base/loading.gif" /></div>',
 	triggerPageThreshold: 5,
 	onRenderComplete: function() {
-		$('.excerpt .thumb').lazyload({
-			placeholder: '/assets/img/base/occupying.png',
-			threshold: 400
-		});
+		// $('.excerpt .thumb').lazyload({
+		// 	placeholder: '/assets/img/base/occupying.png',
+		// 	threshold: 400
+		// });
 		$('.excerpt img').attr('draggable', 'false');
 		$('.excerpt a').attr('draggable', 'false')
 	}

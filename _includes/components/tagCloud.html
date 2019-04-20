@@ -13,13 +13,47 @@
 		});
 	}, 5000)
 </script> -->
-<h3>标签云</h3>
-<div class="widget-sentence-content">
-  <ul class="plinks ptags">           
+<h3>标签云 【{{ paginator.total_posts }}】</h3>
+<div class="widget-sentence-content">  
+<div id="tag-cloud"></div>
+<link rel="stylesheet" type="text/css" href="/assets/css/resos/zzsc.css">
+<script src="/assets/js/base/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="/assets/js/resos/jquery.svg3dtagcloud.min.js"></script>
+<script type="text/javascript">
+  $( document ).ready( function() {
+  var entries = [ 
     {% for tag in site.tags %}
-      <li>
-    	<a href="#{{ tag | first }}">{{ tag | first }} <span class="badge">{{ paginator.total_posts }}</span></a>
-	 </li>  
-  	{% endfor %}            
-  </ul>
+      { label: '{{ tag | first }}', url: '#', target: '_top' },
+    {% endfor %}            
+  ];
+
+  var settings = {
+
+    entries: entries,
+    width: 328,
+    height: 380,
+    radius: '65%',
+    radiusMin: 75,
+    bgDraw: true,
+    bgColor: '#d6e0e0',
+    opacityOver: 1.00,
+    opacityOut: 0.05,
+    opacitySpeed: 6,
+    fov: 800,
+    speed: 0.5,
+    fontFamily: 'Oswald, Arial, sans-serif',
+    fontSize: '10',
+    fontColor: '#5599f1',
+    fontWeight: 'bold',//bold normal
+    fontStyle: 'italic',//italic 
+    fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+    fontToUpperCase: true
+
+  };
+
+    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+    $( '#tag-cloud' ).svg3DTagCloud( settings );
+
+  });
+</script>
 </div>
