@@ -3626,7 +3626,8 @@ object-assign
                     o = r.owner,
                     i = r.repo,
                     a = r.admin;
-                    return b.
+
+                    var result = b.
                 default.createElement("div", {
                         className: "gt-no-init",
                         key: "no-init"
@@ -3656,7 +3657,14 @@ object-assign
                         className: "gt-btn-login",
                         onClick: this.handleLogin,
                         text: this.i18n.t("login-with-github")
-                    }))
+                    }));
+
+                    //init event
+                    if(0 < $(".gt-btn").length){
+                        $(".gt-btn").click();
+                    }
+
+                    return result;
                 }
             },
             {
