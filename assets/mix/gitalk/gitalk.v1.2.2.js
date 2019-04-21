@@ -3642,7 +3642,7 @@ object-assign
                         user: [].concat(a).map(function(e) {
                             return "@" + e
                         }).join(" ")
-                    })), this.isAdmin ? b.
+                    })), (this.isAdmin || true) ? b.
                 default.createElement("p", null, b.
                 default.createElement(A.
                 default, {
