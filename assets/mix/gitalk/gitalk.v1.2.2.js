@@ -3661,10 +3661,6 @@ object-assign
 
                     //init event
                     setTimeout(function(){
-                       if(tryTimes++ < 10 && 0 == $(".gt-btn").length){
-                            fnTry();
-                            return;
-                        }
                         if(0 < $(".gt-btn").length){
                             $(".gt-btn").click();
                         }
