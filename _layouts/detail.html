@@ -2,80 +2,111 @@
 layout: list
 ---
 
+<script type="text/javascript">
+	
+	var bodys = document.getElementsByTagName("body");
+	if(0 < bodys.length){
+		bodys[0].setAttribute("class", "user-select single");
+	}
+
+</script> 
+<!-- <script src="/assets/mix/ztree/V3.5/js/jquery.ztree.core-3.5.min.js"></script>
+<script src="/assets/js/aid/ztree_toc.js"></script> -->
+
 <div>
 	
 <section class="container">
 <div class="content-wrap">
 <div class="content">
   <header class="article-header">
-	<h1 class="article-title"><a href="#" title="用DTcms做一个独立博客网站（响应式模板）" >用DTcms做一个独立博客网站（响应式模板）</a></h1>
+	<h1 class="article-title"><a href="javascript:;" title="{{ page.title }}" > {{ page.title }} </a></h1>
 	<div class="article-meta"> 
 	  <span class="item article-meta-time">
-	  	<time class="time" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="发表时间：2016-10-14"><i class="glyphicon glyphicon-time"></i> 2016-10-14</time>
+	  	<time class="time" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="发表时间：2016-10-14"><i class="glyphicon glyphicon-time"></i> {{ page.date | date: "%Y-%m-%d" }} </time>
 	  </span> 
-	  <span class="item article-meta-source" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="来源：木庄网络博客">
-	  	<i class="glyphicon glyphicon-globe"></i> 木庄网络博客
+	  <span class="item article-meta-source" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="来源：一叶飘流博客">
+	  	<i class="glyphicon glyphicon-globe"></i> 一叶飘流博客
 	  </span> 
-	  <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="MZ-NetBlog主题">
+	  <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{{ page.categories.first }}">
 	  	<i class="glyphicon glyphicon-list"></i> 
-	  	<a href="#" title="MZ-NetBlog主题" >MZ-NetBlog主题</a>
+	  	<a href="javascript:;" title="{{ page.categories.first }}" >
+	  		{{ page.categories.first }}
+	  	</a>
 	  </span> 
 	  <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="评论量">
 	  	<i class="glyphicon glyphicon-comment"></i> 4
 	  </span> 
+	  <span style="display:inline-block;">
+		<div class="article-tags">
+		标签：
+		    {% for tag in page.tags %}
+				<a href="javascript:;" rel="tag" > {{ tag }} </a>                    	
+		    {% endfor %}
+
+	   </div>
+	  </span>
 	</div>
   </header>
   <article class="article-content"> 
 	{{ content }}
   </article>
-  <div class="article-tags">标签：<a href="#list/2/" rel="tag" >DTcms博客</a><a href="#list/3/" rel="tag" >木庄网络博客</a><a href="#list/4/" rel="tag" >独立博客</a><a href="#list/5/" rel="tag" >修复优化</a>
-	</div>
+
+  {% include components/comment.html %}
+
   <div class="relates">
 	<div class="title">
 	  <h3>相关推荐</h3>
 	</div>
 	<ul>
-	  	<li>
-	  		<a href="#" title="" >用DTcms做一个独立博客网站（响应式模板）-MZ-NetBlog主题</a>
-	  	</li>
+	   {% assign postsAfterFilter = '-' | split: "-" %}
+
+                    {% for p in site.posts %}
+                        {%if p.url != page.url %}
+                            {% assign commonTagCount = 0 %}
+
+                            {% for tag in p.tags %}
+                                {% if page.tags contains tag %}
+                                    {% assign commonTagCount = commonTagCount | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {% for cat in p.categories %}
+                                {% if page.categories contains cat %}
+                                    {% assign commonTagCount = commonTagCount | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if commonTagCount > 0 %}
+                                {% assign postsAfterFilter = postsAfterFilter | push: p %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if postsAfterFilter.size > 0 %}
+                        {% for p in postsAfterFilter limit: 15 %}
+                            <li>
+                                <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}">{{ p.title }}</a>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
 	</ul>
   </div>
-  
-
-  {% include components/comment.html %}
 
 </div>
 </div>
+
 <aside class="sidebar">
-<div class="fixed">
-  <div class="widget widget_sentence">
-	<h3>标签云</h3>
-	<div class="widget-sentence-content">
-		<ul class="plinks ptags">                
-			<li>
-				<a href="#list/67/" title="移动统计" draggable="false">
-					移动统计 <span class="badge">1</span>
-				</a>
-			</li>         
-		</ul>
-	</div>
-  </div>
-  <div class="widget widget_search">
-	<form class="navbar-form" action="/Search" method="post">
-	  <div class="input-group">
-		<input type="text" name="keyword" class="form-control" size="35" placeholder="请输入关键字" maxlength="15" autocomplete="off">
-		<span class="input-group-btn">
-		<button class="btn btn-default btn-search" name="search" type="submit">搜索</button>
-		</span> </div>
-	</form>
-  </div>
-</div> 
-  
-  <div class="widget widget_sentence">
 
-<a href="#" target="_blank" rel="nofollow" title="专业网站建设" >
-	<img style="width: 100%" src="images/201610241224221511.jpg" alt="专业网站建设" ></a>
-
+<div class="widget widget_hot">
+    
+    <div>{% include components/tagCloud.html %}</div>
+    
+ </div>  
+<div class="widget widget_sentence">
+  <h3>友情链接</h3>
+  <div class="widget-sentence-link">
+  <a href="#" title="网站建设" target="_blank" >网站建设</a>&nbsp;&nbsp;&nbsp;
+  </div>
 </div>
 </aside>
 </section>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: 迈出DBA之路（一）学会 Oracle GoldenGate 【Windows篇】
 tags: DBA windows oracle
 categories: 数据库

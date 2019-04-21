@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: 衣服尺寸的研究
 tags: 软技能
 categories: 生活

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: 基本功之算法的修炼（一） 【B-树】
 tags: 基础 算法
 categories: 数学

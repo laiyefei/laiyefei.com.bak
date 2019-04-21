@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: java 学习历程 (四) 【Dubbo框架】
 tags: java
 categories: 框架

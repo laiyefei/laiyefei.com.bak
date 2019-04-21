@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: java 学习历程 (一) 【窥探JVM】
 tags: java 虚拟机  
 categories: 编程语言

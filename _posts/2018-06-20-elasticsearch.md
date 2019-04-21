@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: 初探ELK
 tags: 数据库 NoSQL java
 categories: 运维

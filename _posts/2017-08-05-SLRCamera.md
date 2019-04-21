@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: 看看单反相机
 tags: 相机
 categories: 硬件

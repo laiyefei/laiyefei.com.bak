@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: java 学习历程 (二) 【Java语法】
 tags: java 语法
 categories: 编程语言

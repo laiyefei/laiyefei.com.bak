@@ -42,7 +42,7 @@ permalink: /index
 
 
   <article class="excerpt-minic excerpt-minic-index">
-    <h2><span class="red">【推荐】</span><a target="_blank" href="#" title="{{site.posts.first.title}}" >{{site.posts.first.title}}</a>
+    <h2><span class="red">【推荐】</span><a target="_blank" href="{{ site.posts.first.url | prepend: site.baseurl | prepend: site.url }}" title="{{site.posts.first.title}}" >{{site.posts.first.title}}</a>
     </h2>
     <p class="note">
       {{site.posts.first.note}}
@@ -61,7 +61,7 @@ permalink: /index
   <a class="focus" href="javascript:;" title="{{post.title}}" target="_blank" ><img class="thumb" data-original="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" src="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" alt="{{post.title}}"  style="display: inline;"></a>
     <header><a class="cat" href="javascript:;" title="{{ post.categories }}" >{{ post.categories }}<i></i></a>
       <h2>
-        <a href="{{ site.baseurl | prepend: site.url  }}/detail/#{{ post.date | date: '%Y-%m-%d' }}" title="{{post.title}}" target="_blank" >{{post.title}}</a>
+        <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{post.title}}" target="_blank" >{{post.title}}</a>
       </h2>
     </header>
     <p class="meta">

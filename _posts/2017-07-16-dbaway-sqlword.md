@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: 迈出DBA之路（二）揭开SQL语句的面纱 【Oracle篇】
 tags: DBA oracle 脚本
 categories: 数据库

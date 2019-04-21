@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: 走出缸中脑
 tags: 思想
 categories: 科学

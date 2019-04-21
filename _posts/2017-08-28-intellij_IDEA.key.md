@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: detail
 title: Intellij IDEA 快捷键记录
 tags: IDE
 categories: 工具
