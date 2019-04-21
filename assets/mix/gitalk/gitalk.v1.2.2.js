@@ -3660,11 +3660,11 @@ object-assign
                     }));
 
                     //init event
-                    setTimeout(function(){
-                        if(0 < $(".gt-btn").length){
-                            $(".gt-btn").click();
-                        }
-                    }, 1000);
+                    // setTimeout(function(){
+                    //     if(0 < $(".gt-btn").length){
+                    //         $(".gt-btn").click();
+                    //     }
+                    // }, 1000);
                     return result;
                 }
             },
