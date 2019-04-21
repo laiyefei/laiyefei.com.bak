@@ -3408,6 +3408,7 @@ object-assign
                     r = n.owner,
                     o = n.repo,
                     a = n.id,
+                    title = n.title,
                     u = n.labels,
                     s = n.clientID,
                     c = n.clientSecret;
@@ -3415,7 +3416,7 @@ object-assign
                         params: {
                             client_id: s,
                             client_secret: c,
-                            labels: u.concat(a).join(","),
+                            labels: u.concat(title).join(","), 
                             t: Date.now()
                         }
                     }).then(function(t) {
