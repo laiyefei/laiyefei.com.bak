@@ -3660,10 +3660,20 @@ object-assign
                     }));
 
                     //init event
-                    if(0 < $(".gt-btn").length){
-                        $(".gt-btn").click();
-                    }
+                    var tryTimes = 0;
+                    var fnTry = function(){
+                        setTimeout(function(){
+                           if(tryTimes++ < 10 && 0 == $(".gt-btn").length){
+                                fnTry();
+                                return;
+                            }
+                            if(0 < $(".gt-btn").length){
+                                $(".gt-btn").click();
+                            }
+                        }, 1000)   
 
+                    }
+                    fnTry();
                     return result;
                 }
             },
