@@ -12,48 +12,33 @@ permalink: /list
   <div class="title">
 	<h3 style="line-height: 1.3">文章列表</h3>
   </div>
+ 
+<div>
+    {% for tag in site.tags %}
+    <h5 id="{{ tag | first }}">{{ tag | first }}</h5>
+    <ul>
+        {% for posts in tag  %}
+        	{% for post in posts %}
+        		{% if post.title != null %}
+        		
+        			<article class="excerpt excerpt-1"><a class="focus" href="#" title="test title" target="_blank" ><img class="thumb" data-original="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" src="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" alt="test alt"  style="display: inline;"></a>
+						<header><a class="cat" href="javascript:;" title="{{ post.categories }}" >{{ post.categories }}<i></i></a>
+						  <h2><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{post.title}}" target="_blank" >{{post.title}}</a></h2>
+						</header>
+						<p class="meta">
+						  <time class="time"><i class="glyphicon glyphicon-time"></i> {{ post.date | date: "%Y-%m-%d" }}</time>
+						  <span class="views"><i class="glyphicon glyphicon-eye-open"></i> 217</span> <a class="comment" href="##comment" title="评论" target="_blank" ><i class="glyphicon glyphicon-comment"></i> 4</a></p>
+						<p class="note">
+					      {{post.note}}
+						</p>
+					  </article>
 
-{% for post in site.posts %} 
-
-
-  <article class="excerpt excerpt-1"><a class="focus" href="#" title="test title" target="_blank" ><img class="thumb" data-original="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" src="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" alt="test alt"  style="display: inline;"></a>
-	<header><a class="cat" href="javascript:;" title="{{ post.categories }}" >{{ post.categories }}<i></i></a>
-	  <h2><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{post.title}}" target="_blank" >{{post.title}}</a></h2>
-	</header>
-	<p class="meta">
-	  <time class="time"><i class="glyphicon glyphicon-time"></i> {{ post.date | date: "%Y-%m-%d" }}</time>
-	  <span class="views"><i class="glyphicon glyphicon-eye-open"></i> 217</span> <a class="comment" href="##comment" title="评论" target="_blank" ><i class="glyphicon glyphicon-comment"></i> 4</a></p>
-	<p class="note">
-      {{post.note}}
-	</p>
-  </article>
-
-{% endfor %}    
-
-
-
-  <nav class="pagination" style="display: none;">
-    <ul>  
-      {% if paginator.total_pages > 1 %}
-        {% if paginator.previous_page %}
-              <li class="prev-page"><a  href="{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-        {% endif %}
-        {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-              <li class="active"><span>{{ page }}</span></li>
-            {% elsif page == 1 %}
-              <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url  }}">{{ page }}</a></li>
-            {% else %}
-              <li><a href="{{ page |  prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ page }}</a></li>
-            {% endif %}
+        		{% endif %}
+        	{% endfor %}
         {% endfor %}
-        {% if paginator.next_page %}
-              <li class="next-page" ><a  href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-        {% endif %}
-      {% endif %}
-        <li><span>共 {{ paginator.total_pages }} 页</span></li>
     </ul>
-  </nav>  
+    {% endfor %}
+</div>
 
 
 </div>

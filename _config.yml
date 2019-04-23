@@ -6,10 +6,11 @@ kramdown:
   input:  GFM
   syntax_highlighter: rouge
 
+baseurl: ""
+
 plugins: [jekyll-paginate]
 paginate: 10
 paginate_path: ":num"
-baseurl: ""
 
 
 
@@ -33,7 +34,7 @@ swiftype_searchId: "ncwR9a8S9CTx2q9SgsJm"
 
 
 
-
+name: "➳叶漂流"
 url: "http://laiyefei.com"
 imgrepo: "http://laiyefei.com/static/img"
 

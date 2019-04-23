@@ -1,58 +1,78 @@
-<!-- <div class="tagCloud">
-  {% for tag in site.tags %}
-    <a href="#{{ tag | first }}">{{ tag | first }}</a>
-  {% endfor %}
-</div>
-<link rel="stylesheet" type="text/css" href="/assets/css/resos/tagCloud.css" />
-<script type="text/javascript" src="/assets/js/base/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/assets/js/resos/tagCloud.js"></script>
-<script type="text/javascript">
-	setTimeout(function(){
-		$(function(){
-		    $('.tagCloud').tagCloud();
-		});
-	}, 5000)
-</script> -->
-<h3>标签云 【{{ paginator.total_posts }}】</h3>
+{% if paginator %}
+  <h3>标签云 
+  【{{ paginator.total_posts }}】
+  </h3>
+  {%else%}
+  <h3>标签墙 </h3>
+{% endif %}
+
 <div class="widget-sentence-content">  
-<div id="tag-cloud"></div>
-<link rel="stylesheet" type="text/css" href="/assets/css/resos/zzsc.css">
-<script src="/assets/js/resos/jquery.svg3dtagcloud.min.js"></script>
-<script type="text/javascript">
-  $( document ).ready( function() {
-  var entries = [ 
-    {% for tag in site.tags %}
-      { label: '{{ tag | first }}', url: '#', target: '_top' },
-    {% endfor %}            
-  ];
+    
+    {% if paginator %}
+        <div id="tag-cloud"></div>
+        <link rel="stylesheet" type="text/css" href="/assets/css/resos/zzsc.css">
+        <script src="/assets/js/resos/jquery.svg3dtagcloud.min.js"></script>
+        <script type="text/javascript">
+          $( document ).ready( function() {
+          var entries = [ 
+            {% for tag in site.tags %}
+              { label: '{{ tag | first }} ({{ tag | last | size }})', url: '#', target: '_top' },
+            {% endfor %}            
+          ];
 
-  var settings = {
+          var settings = {
 
-    entries: entries,
-    width: 328,
-    height: 380,
-    radius: '65%',
-    radiusMin: 75,
-    bgDraw: true,
-    bgColor: '#d6e0e0',
-    opacityOver: 1.00,
-    opacityOut: 0.05,
-    opacitySpeed: 6,
-    fov: 800,
-    speed: 0.5,
-    fontFamily: 'Oswald, Arial, sans-serif',
-    fontSize: '10',
-    fontColor: '#5599f1',
-    fontWeight: 'bold',//bold normal
-    fontStyle: 'italic',//italic 
-    fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-    fontToUpperCase: true
+            entries: entries,
+            width: 328,
+            height: 380,
+            radius: '65%',
+            radiusMin: 75,
+            bgDraw: true,
+            bgColor: '#d6e0e0',
+            opacityOver: 1.00,
+            opacityOut: 0.05,
+            opacitySpeed: 6,
+            fov: 800,
+            speed: 0.5,
+            fontFamily: 'Oswald, Arial, sans-serif',
+            fontSize: '10',
+            fontColor: '#5599f1',
+            fontWeight: 'bold',//bold normal
+            fontStyle: 'italic',//italic 
+            fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+            fontToUpperCase: true
 
-  };
+          };
 
-    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
-    $( '#tag-cloud' ).svg3DTagCloud( settings );
+            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+            $( '#tag-cloud' ).svg3DTagCloud( settings );
 
-  });
-</script>
+          });
+        </script>
+        {% else %}
+        <ul class="plinks ptags">           
+          {% for tag in site.tags %}
+            <li style="width:108px"><a href="#{{ tag | first }}" title="{{ tag | first }}" >
+            <div style="position:relative;">
+              <span style="
+                background-color:#eee;
+                display: inline-block;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                width:calc(100% - 10px);
+                float:left;
+                letter-spacing: 1px;
+                text-align: right;
+              " >
+                {{ tag | first }}
+              </span>
+              <span style="float:right;width:10px;background-color:#eee;color:#c166b1;padding-left:2px;font-weight: bold;font-size:20px;"><sup>{{ tag | last | size }}</sup></span>
+            </div>
+          </a></li>
+          {% endfor %} 
+        </ul>
+
+    {% endif %} 
+
 </div>
