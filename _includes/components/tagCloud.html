@@ -1,9 +1,9 @@
 {% if paginator %}
-  <h3>标签云 
+  <h3 style="text-shadow: 0 0 3px blue">♋ 标签云 
   【{{ paginator.total_posts }}】
   </h3>
   {%else%}
-  <h3>标签墙 </h3>
+  <h3  style="text-shadow: 0 0 3px green" >▓ 标签墙 </h3>
 {% endif %}
 
 <div class="widget-sentence-content">  
@@ -50,9 +50,9 @@
           });
         </script>
         {% else %}
-        <ul class="plinks ptags">           
+        <ul class="plinks ptags" id="ulTagWall">           
           {% for tag in site.tags %}
-            <li style="width:108px"><a href="#{{ tag | first }}" onclick="javascript:$('.list_hook_title').hide();$('#{{ tag | first }}').show();" title="{{ tag | first }}" >
+            <li style="width:108px"><a href="#{{ tag | first }}" times="1" onclick="javascript:tagDoAutoHide('{{ tag | first }}', this);" title="{{ tag | first }}" >
             <div style="position:relative;">
               <span style="
                 background-color:#eee;
@@ -64,6 +64,7 @@
                 float:left;
                 letter-spacing: 1px;
                 text-align: right;
+                font-size: 12px;
               " >
                 {{ tag | first }}
               </span>
