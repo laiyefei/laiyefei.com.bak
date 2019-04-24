@@ -16,7 +16,7 @@
           $( document ).ready( function() {
           var entries = [ 
             {% for tag in site.tags %}
-              { label: '{{ tag | first }} ({{ tag | last | size }})', url: '#', target: '_top' },
+              { label: '{{ tag | first }} ({{ tag | last | size }})', url: '/list#{{ tag | first }}', target: '_top' },
             {% endfor %}            
           ];
 
