@@ -175,3 +175,45 @@ function SiteSearch(send_url, divTgs) {
 	}
 	return false
 }
+
+//init respose show
+(function() {
+	var element = $("#navbar");
+	var top = element.position().top,
+	pos = element.css("position");
+	var scrolls = $(this).scrollTop();
+	if (scrolls > top) {
+		$('.header-topbar').fadeOut(0);
+		if (window.XMLHttpRequest) {
+			element.css({
+				position: "fixed",
+				top: 0
+			}).addClass("shadow");
+			$('.fixed').css({
+				'position': 'fixed',
+				'top': '70px',
+				'width': '360px'
+			})
+		} else {
+			element.css({
+				top: scrolls
+			});
+		}
+	} else {
+		$('.header-topbar').fadeIn(500);
+		element.css({
+			position: pos,
+			top: top
+		}).removeClass("shadow");
+		$('.fixed').removeAttr("style");
+	}
+
+	var href = decodeURIComponent(window.location.href);
+
+	var hrefParams = href.split("#");
+
+	if(0 < hrefParams.length){
+		$('#' + hrefParams[1]).show();
+	}
+
+})();

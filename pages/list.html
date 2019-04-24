@@ -15,7 +15,8 @@ permalink: /list
  
 <div>
     {% for tag in site.tags %}
-    <h5 id="{{ tag | first }}" style="padding:10px;font-size: 20px;font-weight: bold">{{ tag | first }}</h5>
+    <div id="{{ tag | first }}" class="list_hook_title" style="padding:30px;display: none;"></div>
+    <h5 id="show_{{ tag | first }}" style="padding:10px;font-size: 20px;font-weight: bold">{{ tag | first }}</h5>
         {% for posts in tag  %}
         	{% for post in posts %}
         		{% if post.title != null %}

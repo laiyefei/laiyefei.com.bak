@@ -52,7 +52,7 @@
         {% else %}
         <ul class="plinks ptags">           
           {% for tag in site.tags %}
-            <li style="width:108px"><a href="#{{ tag | first }}" title="{{ tag | first }}" >
+            <li style="width:108px"><a href="#{{ tag | first }}" onclick="javascript:$('.list_hook_title').hide();$('#{{ tag | first }}').show();" title="{{ tag | first }}" >
             <div style="position:relative;">
               <span style="
                 background-color:#eee;
