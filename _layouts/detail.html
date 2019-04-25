@@ -2,6 +2,9 @@
 layout: list
 ---
 
+<link rel="stylesheet" type="text/css" href="/assets/css/biz/detail.buff.css">
+
+
 <script type="text/javascript">
 	
 	var bodys = document.getElementsByTagName("body");
@@ -24,17 +27,17 @@ layout: list
 	  <span class="item article-meta-time">
 	  	<time class="time" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="发表时间：2016-10-14"><i class="glyphicon glyphicon-time"></i> {{ page.date | date: "%Y-%m-%d" }} </time>
 	  </span> 
-	  <span class="item article-meta-source" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="来源：一叶飘流博客">
+	  <span class="item article-meta-source" id="dvDetailToLeaffly" data-toggle="tooltip" data-placement="bottom" title="一叶飘流博客" data-original-title="来源：一叶飘流博客" >
 	  	<i class="glyphicon glyphicon-globe"></i> 一叶飘流博客
 	  </span> 
-	  <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{{ page.categories.first }}">
+	  <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="{{ page.categories.first }}" data-original-title="{{ page.categories.first }}">
 	  	<i class="glyphicon glyphicon-list"></i> 
 	  	<a href="javascript:;" title="{{ page.categories.first }}" >
 	  		{{ page.categories.first }}
 	  	</a>
 	  </span> 
-	  <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="评论量">
-	  	<i class="glyphicon glyphicon-comment"></i> 4
+	  <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="评论量" data-original-title="评论量">
+	  	<i class="glyphicon glyphicon-comment"></i> <span id="spanCommentCount">0</span>
 	  </span> 
 	  <span style="display:inline-block;">
 		<div class="article-tags">
@@ -42,20 +45,20 @@ layout: list
 		    {% for tag in page.tags %}
 				<a href="/list#{{ tag }}" rel="tag" > {{ tag }} </a>                    	
 		    {% endfor %}
-
 	   </div>
 	  </span>
 	</div>
   </header>
-  <article class="article-content"> 
+  <article class="article-content csDetailPost"  > 
 	{{ content }}
   </article>
 
   {% include components/comment.html %}
 
   <div class="relates">
+	<div style="padding:30px 0"></div>
 	<div class="title">
-	  <h3>相关推荐</h3>
+	  <h3 style="text-shadow:0 1px 2px grey">相关推荐</h3>
 	</div>
 	<ul>
 	   {% assign postsAfterFilter = '-' | split: "-" %}
@@ -90,25 +93,28 @@ layout: list
                         {% endfor %}
                     {% endif %}
 	</ul>
+
+
+
+	<div style="padding:50px 0"></div> 
+
   </div>
 
 </div>
 </div>
 
 <aside class="sidebar">
-
-<div class="widget widget_hot">
-    
-    <div>{% include components/tagCloud.html %}</div>
-    
- </div>  
-<div class="widget widget_sentence">
-  <h3>友情链接</h3>
-  <div class="widget-sentence-link">
-  <a href="#" title="网站建设" target="_blank" >网站建设</a>&nbsp;&nbsp;&nbsp;
-  </div>
-</div>
+	<div class="fixed">
+		<div class="widget widget_hot">
+			{% include components/toc.html %}
+		</div>  
+	</div>
 </aside>
 </section>
 	
+	<script type="text/javascript">
+		$("#dvDetailToLeaffly").click(function(){
+			location.href = "/index";
+		});
+	</script>
 </div>

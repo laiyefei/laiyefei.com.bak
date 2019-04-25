@@ -44,7 +44,7 @@ function tagDoAutoHide(id, ele, times){
 				$ele[0].click();
 			}, 300);
 		})($ele);
-	} 
+	}
 }
 
 function elementAutoHide(element){
@@ -70,19 +70,11 @@ function elementAutoHide(element){
 				'top': '70px',
 				'width': '360px'
 			});
-			var href = decodeURIComponent(window.location.href);
-			var hrefParams = href.split("#");
-			if(0 < hrefParams.length){
-				$('#' + hrefParams[1]).show();
-				$("#show_" + hrefParams[1]).css({
-					"font-weight" : "bold"
-				});
-			}
 		} else {
 			element.css({
 				top: scrolls
 			});
-		}
+		} 
 	} else {
 		headerTopbar.fadeIn(500);
 		element.css({
@@ -91,6 +83,14 @@ function elementAutoHide(element){
 		}).removeClass("shadow");
 		fixEle.removeAttr("style");
 		$("#ulTagWall a").attr("times", "1");
+	}
+	var href = decodeURIComponent(window.location.href);
+	var hrefParams = href.split("#");
+	if(0 < hrefParams.length){
+		$('#' + hrefParams[1]).show();
+		$("#show_" + hrefParams[1]).css({
+			"font-weight" : "bold"
+		});
 	}
 }
 

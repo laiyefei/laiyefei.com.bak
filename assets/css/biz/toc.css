@@ -1,0 +1,40 @@
+@media screen and (min-width: 1200px){
+    /**
+      * 文章目录相关
+      */
+    .csDetailPost ul#markdown-toc {
+        display: none!important;
+    }
+}
+
+.csToc ul{
+	padding-left: 30px;
+
+}
+.csToc ul li a{
+	padding-left: 0;
+	border-bottom:none;
+}
+
+.csToc{ 
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+
+.csToc::-webkit-scrollbar {
+	width: 10px;
+	background: #8080803b
+}
+.csToc::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #bbb;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.csToc::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+}
+.csToc::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4);
+}
