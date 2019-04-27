@@ -3380,7 +3380,6 @@ object-assign
                 key: "getUserInfo",
                 value: function() {
                     var e = this;
-                    e.isAdmin = true;
                     return C.axiosGithub.get("/user", {
                         headers: {
                             Authorization: "token " + this.accessToken
