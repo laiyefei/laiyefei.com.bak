@@ -3385,6 +3385,15 @@ object-assign
                             Authorization: "token " + this.accessToken
                         }
                     }).then(function(t) {
+
+                        //push to talkObj
+                        
+                        if(t["data"] && t["data"]["login"]){
+                            var account = t["data"]["login"];
+                            talkObj["owner"]=account;
+                            talkObj["owner"]["admin"].push(account);
+                        }                        
+
                         e.setState({
                             user: t.data
                         })
@@ -3948,6 +3957,7 @@ object-assign
             {
                 key: "isAdmin",
                 get: function() {
+
                     var e = this.options.admin,
                     t = this.state.user;
                     return t && ~ [].concat(e).map(function(e) {
