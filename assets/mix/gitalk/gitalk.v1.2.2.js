@@ -3948,12 +3948,11 @@ object-assign
             {
                 key: "isAdmin",
                 get: function() {
-                    //var e = this.options.admin,
-                    //t = this.state.user;
-                    return true;
-                    // return t && ~ [].concat(e).map(function(e) {
-                    //     return e.toLowerCase()
-                    // }).indexOf(t.login.toLowerCase());
+                    var e = this.options.admin,
+                    t = this.state.user;
+                    return t && ~ [].concat(e).map(function(e) {
+                        return e.toLowerCase()
+                    }).indexOf(t.login.toLowerCase());
                 }
             }]),
             t
