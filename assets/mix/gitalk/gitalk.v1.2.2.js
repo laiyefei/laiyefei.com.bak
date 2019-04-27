@@ -3459,9 +3459,18 @@ object-assign
                     a = t.id,
                     u = t.labels,
                     s = t.url;
+
+                    var uu = [];
+                    for(var i in u){
+                        if("" == u[i]){
+                            continue;
+                        }
+                        uu.push(u[i]);
+                    }
+
                     return C.axiosGithub.post("/repos/" + n + "/" + r + "/issues", {
                         title: o,
-                        labels: u.concat(a),
+                        labels: uu.concat(a),
                         body: i || s + " \n\n " + ((0, C.getMetaContent)("description") || (0, C.getMetaContent)("description", "og:description") || "")
                     },
                     {
