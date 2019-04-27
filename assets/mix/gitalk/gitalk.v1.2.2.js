@@ -3663,16 +3663,22 @@ object-assign
                     b.
                 default.createElement("p", {
                         dangerouslySetInnerHTML: {
-                            __html: this.i18n.t("no-found-related", {
-                                link: '<a href="https://github.com/' + o + "/" + i + '/issues">Issues</a>'
-                            })
+                            __html: "<span style='color:grey;padding:40px;display:block'>此文章还未评论，赶紧登录Github评论吧。</span>" 
+                            // this.i18n.t("no-found-related", {
+                            //     link: '<a href="https://github.com/' + o + "/" + i + '/issues">Issues</a>'
+                            // })
                         }
                     }), b.
-                default.createElement("p", null, this.i18n.t("please-contact", {
-                        user: [].concat(a).map(function(e) {
-                            return "@" + e
-                        }).join(" ")
-                    })), (this.isAdmin) ? b.
+                default.createElement("p", null, 
+                    ""
+                    // this.i18n.t("please-contact", {
+                    //     user: [].concat(a).map(function(e) {
+                    //         return "@" + e
+                    //     }).join(" ")
+                    // })
+                )
+
+                , (this.isAdmin) ? b.
                 default.createElement("p", null, b.
                 default.createElement(A.
                 default, {
