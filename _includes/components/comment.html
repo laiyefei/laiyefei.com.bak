@@ -4,17 +4,18 @@
 <link rel="stylesheet" href="/assets/mix/gitalk/gitalk.v1.2.2.min.css">
 <script src="/assets/mix/gitalk/gitalk.v1.2.2.js"></script>
 <script type="text/javascript">
-  var gitalk = new Gitalk({
-                 id:"xxxxxxxxxxxxxx",
-                  title:"this title",
-                  owner: 'ish9dcn',
-                  repo: 'warehouse',
-                  clientID: 'f8dba1317eaa7f5f4335',
-                  clientSecret: 'f8c02b2c5757afa3845a55c84aac222727a6abfb',
-                  labels:["gitalk_test"],
-                  admin: ['ish9dcn'],
-                  body: decodeURI(location.href)
-  });
+  var talkObj = {
+      id:"{{ page.title }}",
+      title:"{{ page.title }}",
+      owner: 'ish9dcn',
+      repo: 'warehouse',
+      clientID: 'f8dba1317eaa7f5f4335',
+      clientSecret: 'f8c02b2c5757afa3845a55c84aac222727a6abfb',
+      labels:["{{ page.label }}"],
+      admin: ['ish9dcn'],
+      body: decodeURI(location.href)
+  };
+  var gitalk = new Gitalk(talkObj);
   gitalk.render('dvGitalk');
 
 

@@ -3380,6 +3380,7 @@ object-assign
                 key: "getUserInfo",
                 value: function() {
                     var e = this;
+                    e.isAdmin = true;
                     return C.axiosGithub.get("/user", {
                         headers: {
                             Authorization: "token " + this.accessToken
@@ -3644,7 +3645,7 @@ object-assign
                         user: [].concat(a).map(function(e) {
                             return "@" + e
                         }).join(" ")
-                    })), (this.isAdmin || true) ? b.
+                    })), (this.isAdmin) ? b.
                 default.createElement("p", null, b.
                 default.createElement(A.
                 default, {
