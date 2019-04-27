@@ -23,7 +23,7 @@ permalink: /list
 	        {% for posts in tag  %}
 	        	{% for post in posts %}
 	        		{% if post.title != null %}
-	        			<article class="excerpt excerpt-1"><a class="focus" href="#" title="test title" target="_self" ><img class="thumb" data-original="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" src="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" alt="test alt"  style="display: inline;"></a>
+	        			<article class="excerpt excerpt-1"><a class="focus" href="#" title="test title" target="_self" ><img class="thumb" data-original="/assets/img/biz/title/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" src="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" alt="test alt"  style="display: inline;"></a>
 							<header><a class="cat" href="javascript:;" title="{{ post.categories }}" >{{ post.categories }}<i></i></a>
 							  <h2><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{post.title}}" target="_self" >{{post.title}}</a></h2>
 							</header>
