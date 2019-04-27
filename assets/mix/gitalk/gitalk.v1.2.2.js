@@ -3422,11 +3422,20 @@ object-assign
                     u = n.labels,
                     s = n.clientID,
                     c = n.clientSecret;
+
+                    var uu = [];
+                    for(var i in u){
+                        if("" == u[i]){
+                            continue;
+                        }
+                        uu.push(u[i]);
+                    }
+
                     return C.axiosGithub.get("/repos/" + r + "/" + o + "/issues", {
                         params: {
                             client_id: s,
                             client_secret: c,
-                            labels: u.concat(title).join(","), 
+                            labels: uu.concat(title).join(","), 
                             t: Date.now()
                         }
                     }).then(function(t) {
