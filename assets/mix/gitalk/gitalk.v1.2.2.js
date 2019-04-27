@@ -3470,11 +3470,11 @@ object-assign
                     s = t.url;
 
                     var uu = [];
-                    for(var i in u){
-                        if("" == u[i]){
+                    for(var ii in u){
+                        if("" == u[ii]){
                             continue;
                         }
-                        uu.push(u[i]);
+                        uu.push(u[ii]);
                     }
 
                     return C.axiosGithub.post("/repos/" + n + "/" + r + "/issues", {
