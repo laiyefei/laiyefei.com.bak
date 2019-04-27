@@ -3424,11 +3424,11 @@ object-assign
                     c = n.clientSecret;
 
                     var uu = [];
-                    for(var i in u){
-                        if("" == u[i]){
+                    for(var ii in u){
+                        if("" == u[ii]){
                             continue;
                         }
-                        uu.push(u[i]);
+                        uu.push(u[ii]);
                     }
 
                     return C.axiosGithub.get("/repos/" + r + "/" + o + "/issues", {
