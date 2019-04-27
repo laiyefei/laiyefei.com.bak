@@ -3,6 +3,7 @@ layout: detail
 title: 批处理 学习笔记（二） 【Linux篇（基础篇）】
 tags: linux 脚本
 categories: 编程语言 运维
+date: 2017-07-27
 ---
 
 * TOC

@@ -3,6 +3,7 @@ layout: detail
 title: 迈出DBA之路（三） Oracle GoldenGate 部署与使用笔记【扩展】
 tags: DBA windows oracle 笔记
 categories: 数据库 运维
+date: 2017-08-02
 ---
 
 * TOC

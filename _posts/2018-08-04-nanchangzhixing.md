@@ -3,6 +3,7 @@ layout: postWithIframe
 title: 南昌之行
 tags: 旅行
 categories: 旅行
+date: 2018-08-04
 ---
 
 * TOC

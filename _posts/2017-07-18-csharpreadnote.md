@@ -3,6 +3,7 @@ layout: detail
 title: CSharp 研读笔记（二）【撩动WCF】
 tags: CSharp windows
 categories: 框架
+date: 2017-07-18
 ---
 
 * TOC

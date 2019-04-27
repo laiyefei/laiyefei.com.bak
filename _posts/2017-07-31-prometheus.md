@@ -3,6 +3,7 @@ layout: detail
 title: Prometheus 的学习笔记
 tags: 软件架构 大数据 GoLang
 categories: 架构
+date: 2017-07-31
 ---
 
 * TOC

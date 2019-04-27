@@ -3,6 +3,7 @@ layout: detail
 title: 初探ELK
 tags: 数据库 NoSQL java
 categories: 运维
+date: 2018-06-20
 ---
 
 * TOC

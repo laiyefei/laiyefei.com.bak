@@ -3,6 +3,7 @@ layout: detail
 title: CSharp 研读笔记（一）【AOP编程】
 tags: CSharp windows 思想
 categories: 编程语言
+date: 2017-07-17
 ---
 
 * TOC

@@ -3,6 +3,7 @@ layout: detail
 title: 堡垒机的疑问
 tags: 安全
 categories: 原理 运维
+date: 2017-07-20
 ---
 
 * TOC

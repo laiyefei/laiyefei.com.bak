@@ -3,6 +3,7 @@ layout: detail
 title: Intellij IDEA 快捷键记录
 tags: IDE
 categories: 工具
+date: 2017-08-28
 ---
 
 * TOC

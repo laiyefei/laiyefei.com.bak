@@ -3,6 +3,7 @@ layout: detail
 title: requirejs使用心得
 tags: 前端 模块化 
 categories: 框架
+date: 2017-07-10
 ---
 
 * TOC

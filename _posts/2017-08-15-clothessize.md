@@ -3,6 +3,7 @@ layout: detail
 title: 衣服尺寸的研究
 tags: 软技能
 categories: 生活
+date: 2017-08-15
 ---
 
 * TOC

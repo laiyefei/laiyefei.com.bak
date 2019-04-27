@@ -3,6 +3,7 @@ layout: detail
 title: 设计模式整理
 tags: java 设计模式 思想 架构
 categories: 设计模式 架构
+date: 2018-10-31
 ---
 
 * TOC

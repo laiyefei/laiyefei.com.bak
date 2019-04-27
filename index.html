@@ -57,7 +57,7 @@ layout: index
 
 {% for post in paginator.posts %}
 <article class="excerpt excerpt-1" style="">
-  <a class="focus" href="javascript:;" title="{{post.title}}" target="_self" ><img class="thumb" data-original="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" src="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" alt="{{post.title}}"  style="display: inline;"></a>
+  <a class="focus" href="javascript:;" title="{{post.title}}" target="_self" ><img class="thumb" data-original="/assets/img/posts/{{ post.date | date: "%Y-%m-%d" }}/title.jpg" src="/assets/img/biz/title/{{ post.date | date: "%Y-%m-%d" }}.jpg" alt="{{post.title}}"  style="display: inline;"></a>
     <header><a class="cat"  href="javascript:;" title="{{ post.categories }}" >{{ post.categories }}<i></i></a>
       <h2>
         <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{post.title}}" target="_self" >{{post.title}}</a>
