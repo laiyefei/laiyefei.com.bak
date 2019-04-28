@@ -3390,9 +3390,9 @@ object-assign
                         
                         if(t["data"] && t["data"]["login"]){
                             var account = t["data"]["login"];
-                            e["owner"]=account;
-                            e["admin"].length = 0;
-                            e["admin"].push(account);
+                            e.options["owner"]=account;
+                            e.options["admin"].length = 0;
+                            e.options["admin"].push(account);
                         }                        
 
                         e.setState({
