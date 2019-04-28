@@ -3390,9 +3390,9 @@ object-assign
                         
                         if(t["data"] && t["data"]["login"]){
                             var account = t["data"]["login"];
-                            talkObj["owner"]=account;
-                            talkObj["admin"].length = 0;
-                            talkObj["admin"].push(account);
+                            e["owner"]=account;
+                            e["admin"].length = 0;
+                            e["admin"].push(account);
                         }                        
 
                         e.setState({
