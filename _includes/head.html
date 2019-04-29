@@ -45,6 +45,35 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
+
+
+//function for show info in console
+    (function (){
+        var sherlock = {};
+        sherlock.info = {};
+        sherlock.info.msg = [];
+        sherlock.info.msgShow = []; 
+        sherlock.info.msg.push('%c信　　仰：真相??');
+        sherlock.info.msg.push('%c座 右 铭：∮逻辑的旋律牵动现象，永远演奏者事实♪');
+        sherlock.info.msg.push('%c作　　者：leaf.fly');
+        sherlock.info.msg.push('%c描　　述：qq:852800491;微信:13599545977;');
+        sherlock.info.msg.push('%c邮　　箱：sherlock@bakerstreet.club');
+        sherlock.info.msg.push('%c相关链接：bakerstreet.club,sherlock.help,bakerstreet.top,gogoogle.top');
+        sherlock.info.msg.push('%c版 本 号：v1.0.0.20170708');
+        sherlock.info.msg.push('%c❉ ');
+        sherlock.info.msgShow.push('color:#7905C6');
+        sherlock.info.msgShow.push('color:#089898');
+        sherlock.info.msgShow.push('color:#030F05');
+        sherlock.info.msgShow.push('color:#C4810A');
+        sherlock.info.msgShow.push('color:#406239');
+        sherlock.info.msgShow.push('color:#898321');
+        sherlock.info.msgShow.push('color:#AA2E29');
+        sherlock.info.msgShow.push('font-size:16pt');
+        for(var i = 0; i < (sherlock.info.msg.length || 0); i++){
+            console.log(sherlock.info.msg[i], (sherlock.info.msgShow[i] || 'color:red'));  
+        }
+    })();
+
     </script> 
 
  {% for script in page.scripts %}

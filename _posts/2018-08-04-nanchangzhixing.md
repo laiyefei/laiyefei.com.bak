@@ -1,5 +1,5 @@
 ---
-layout: postWithIframe
+layout: detail
 title: 南昌之行
 tags: 旅行
 categories: 旅行
@@ -14,14 +14,14 @@ date: 2018-08-04
 <!--[if lte IE 8]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<link rel="stylesheet" href="/static/css/biz/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/assets/css/bak/style.css" type="text/css" media="screen" />
 
 <!--必要样式表-->
-<link rel="stylesheet" href="/static/css/biz/index.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="/static/css/biz/adapt.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/assets/css/bak/index.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/assets/css/bak/adapt.css" type="text/css" media="screen" />
 
-<script type="text/javascript" src="/static/js/biz/jquery.min.js"></script>
-<script type="text/javascript" src="/static/js/biz/flux.js"></script>
+<script type="text/javascript" src="/assets/js/base/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/assets/js/base.extends/jq-flux.v1.4.4.js"></script>
 <script type="text/javascript">
 
 var oImgExports = [
@@ -192,6 +192,7 @@ $(function(){
 });
 </script>
 
+<div class="csMyTourShow">
 <div id="dvBackground" >
 	<section class="container">
 		<div id="slider" >  
@@ -278,5 +279,6 @@ $(function(){
 			<li class="li-extend" operate="prev"><button type="button" data-transition="turn">上一张</button></li>
 			<li operate="next"><button type="button" data-transition="turn">下一张</button></li>
 		</ul>	
-	</section>
+</section>
+</div>  
 </div>
