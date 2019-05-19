@@ -1,6 +1,6 @@
 .csMyTourShow #slider{background:url("../../img/resos/tours/noise.png"), rgba(255, 255, 255, 0.4);padding:30px;}
-.csMyTourShow ul.transitions{margin:40px -10px;padding:0;overflow:auto;}
-.csMyTourShow ul.transitions li{list-style:none;width:20%;float:left;padding:0 10px 1em;}
+.csMyTourShow ul.transitions{margin:40px -10px;padding:0;overflow:auto;text-align: center;}
+.csMyTourShow ul.transitions li{list-style:none;width:20%;display: inline-block;padding:0 10px 1em;}
 .csMyTourShow ul.transitions li button{
 	font-family:'Antic Slab', arial, sans-serif;
 	display:block;

@@ -26,7 +26,7 @@ function fnWriteToConsole(){
     sherlock.info.msg.push('%c作　　者：leaf.fly');
     sherlock.info.msg.push('%c描　　述：qq:852800491;微信:13599545977;');
     sherlock.info.msg.push('%c邮　　箱：sherlock@bakerstreet.club');
-    sherlock.info.msg.push('%c相关链接：bakerstreet.club,sherlock.help,bakerstreet.top,gogoogle.top');
+    sherlock.info.msg.push('%c友情链接：laiyefei.com,bakerstreet.club,sherlock.help,feels.tech,gogoogle.top');
     sherlock.info.msg.push('%c版 本 号：v1.0.0.20170708');
     sherlock.info.msg.push('%c❉ ');
     sherlock.info.msgShow.push('color:#7905C6');
