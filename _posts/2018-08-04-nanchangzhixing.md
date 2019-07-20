@@ -124,11 +124,11 @@ $(function(){
 
 	var sWord = (iIndex + 1) + "." + oImgExports[iIndex];
 
-	$("#dvExport-font").html(sWord).fadeIn(1500);
-
+	// $("#dvExport-font").html(sWord).fadeIn(1500);
+	
 	$('.transitions li').click(function(event){
 		
-		$("#dvExport-font").hide();
+		// $("#dvExport-font").hide();
 		$("#dvExport").hide();
 	
 		event.preventDefault();
@@ -154,7 +154,7 @@ $(function(){
 
 		$("#dvExport").fadeIn(2000);
 	 	sWord = (iIndex + 1) + "." + oImgExports[iIndex];
-		$("#dvExport-font").html(sWord).fadeIn(2000);
+		// $("#dvExport-font").html(sWord).fadeIn(2000);
 	});
 
 	$("#dvStart").click(function(){
@@ -196,83 +196,83 @@ $(function(){
 <div id="dvBackground" >
 	<section class="container">
 		<div id="slider" >  
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/1.JPG" title="这么有诗意的吗？"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/2.JPG" title="葛优躺"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/3.JPG" title="夕阳"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/4.JPG" title="假装一下"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/5.JPG" title="盘旋的大雁"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/6.JPG" title="妖艳喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/7.JPG" title="离散的喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/8.JPG" title="喷泉。。"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/9.JPG" title="并发的喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/10.JPG" title="调皮的喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/11.JPG" title="喷喷喷"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/12.JPG" title="喷得老高了"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/13.JPG" title="有节奏的喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/14.JPG" title="淡蓝色的喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/15.JPG" title="梦幻的喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/16.JPG" title="神奇的喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/17.JPG" title="喷泉水柱"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/18.JPG" title="喷啊喷"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/19.JPG" title="挺壮观的"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/20.JPG" title="交替的喷泉"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/21.JPG" title="清澈的水面"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/22.JPG" title="有点像花朵"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/23.JPG" title="消失的花朵"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/24.JPG" title="消失的花朵"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/25.JPG" title="袭来的海啸"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/26.JPG" title="一点都不可怕"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/27.JPG" title="宁静的夜色"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/28.JPG" title="秋水的夕阳"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/29.JPG" title="夕阳下的滕王阁"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/30.JPG" title="夕阳下的秋水"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/31.JPG" title="南昌之星"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/32.JPG" title="仰望摩天轮"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/33.JPG" title="遥望远方"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/34.JPG" title="那就是生米大桥了"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/35.JPG" title="俯瞰夜南昌"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/36.JPG" title="遥望八一大桥"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/37.JPG" title="俯瞰南昌夜色"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/38.JPG" title="俯瞰夜色下的南昌"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/39.JPG" title="这运动场还亮着"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/40.JPG" title="欣赏南昌夜色"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/41.JPG" title="欣赏夜色南昌"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/42.JPG" title="宁静的夜晚"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/43.JPG" title="这花挺好看"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/44.JPG" title="八一纪念石碑"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/45.JPG" title="八一广场"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/46.JPG" title="红星下八一广场"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/47.JPG" title="寂静的八一广场"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/48.JPG" title="醉码"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/49.JPG" title="绳金塔广场"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/50.JPG" title="绳金塔"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/51.JPG" title="夜晚的南昌马尔代码"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/52.JPG" title="透着点诡异的红色"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/53.JPG" title="黑夜中的光"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/54.JPG" title="遥望滕王阁"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/55.JPG" title="有人说切三角形"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/56.JPG" title="双子塔"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/57.JPG" title="欲拒还迎"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/58.JPG" title="暗淡的南昌之星"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/59.JPG" title="空无一人的落寞"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/60.JPG" title="寂静南昌之星"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/61.JPG" title="寂静的南昌之星"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/62.JPG" title="落寞"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/63.JPG" title="enmmmmmm"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/64.JPG" title="归程"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/65.JPG" title="最后一眼南昌之星"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/66.JPG" title="最后一眼南昌之星"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/67.JPG" title="最后一眼南昌"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/68.JPG" title="灰色的天"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/69.JPG" title="阴天"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/70.JPG" title="洗不清的水"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/71.JPG" title="已到方特"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/72.JPG" title="离开方特"  />
-			<img width="700" height="400" src="https://raw.githubusercontent.com/sherlock-help/sherlock.help/gh-pages/static/img/tours/南昌之行/73.JPG" title="久违的厦门"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/1.JPG" title="这么有诗意的吗？"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/2.JPG" title="葛优躺"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/3.JPG" title="夕阳"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/4.JPG" title="假装一下"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/5.JPG" title="盘旋的大雁"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/6.JPG" title="妖艳喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/7.JPG" title="离散的喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/8.JPG" title="喷泉。。"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/9.JPG" title="并发的喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/10.JPG" title="调皮的喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/11.JPG" title="喷喷喷"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/12.JPG" title="喷得老高了"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/13.JPG" title="有节奏的喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/14.JPG" title="淡蓝色的喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/15.JPG" title="梦幻的喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/16.JPG" title="神奇的喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/17.JPG" title="喷泉水柱"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/18.JPG" title="喷啊喷"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/19.JPG" title="挺壮观的"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/20.JPG" title="交替的喷泉"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/21.JPG" title="清澈的水面"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/22.JPG" title="有点像花朵"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/23.JPG" title="消失的花朵"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/24.JPG" title="消失的花朵"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/25.JPG" title="袭来的海啸"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/26.JPG" title="一点都不可怕"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/27.JPG" title="宁静的夜色"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/28.JPG" title="秋水的夕阳"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/29.JPG" title="夕阳下的滕王阁"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/30.JPG" title="夕阳下的秋水"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/31.JPG" title="南昌之星"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/32.JPG" title="仰望摩天轮"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/33.JPG" title="遥望远方"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/34.JPG" title="那就是生米大桥了"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/35.JPG" title="俯瞰夜南昌"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/36.JPG" title="遥望八一大桥"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/37.JPG" title="俯瞰南昌夜色"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/38.JPG" title="俯瞰夜色下的南昌"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/39.JPG" title="这运动场还亮着"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/40.JPG" title="欣赏南昌夜色"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/41.JPG" title="欣赏夜色南昌"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/42.JPG" title="宁静的夜晚"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/43.JPG" title="这花挺好看"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/44.JPG" title="八一纪念石碑"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/45.JPG" title="八一广场"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/46.JPG" title="红星下八一广场"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/47.JPG" title="寂静的八一广场"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/48.JPG" title="醉码"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/49.JPG" title="绳金塔广场"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/50.JPG" title="绳金塔"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/51.JPG" title="夜晚的南昌马尔代码"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/52.JPG" title="透着点诡异的红色"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/53.JPG" title="黑夜中的光"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/54.JPG" title="遥望滕王阁"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/55.JPG" title="有人说切三角形"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/56.JPG" title="双子塔"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/57.JPG" title="欲拒还迎"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/58.JPG" title="暗淡的南昌之星"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/59.JPG" title="空无一人的落寞"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/60.JPG" title="寂静南昌之星"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/61.JPG" title="寂静的南昌之星"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/62.JPG" title="落寞"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/63.JPG" title="enmmmmmm"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/64.JPG" title="归程"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/65.JPG" title="最后一眼南昌之星"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/66.JPG" title="最后一眼南昌之星"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/67.JPG" title="最后一眼南昌"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/68.JPG" title="灰色的天"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/69.JPG" title="阴天"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/70.JPG" title="洗不清的水"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/71.JPG" title="已到方特"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/72.JPG" title="离开方特"  />
+			<img width="700" height="400" src="/assets/img/tours/南昌之行/73.JPG" title="久违的厦门"  />
 			
 			<div id="dvExport"></div>
 			<!-- <div id="dvBigImage" title="点击看大图" ></div> -->
-			<div id="dvExport-font"></div>
+			<!-- <div id="dvExport-font"></div> -->
 		</div>
 		
 		<ul class="transitions">
