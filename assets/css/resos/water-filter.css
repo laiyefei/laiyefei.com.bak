@@ -1,0 +1,4 @@
+#focusslide,.thumb{
+  -webkit-filter: url(#water);
+  filter: url(#water);
+}
